@@ -1,1 +1,48 @@
-added the code 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div input {
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="title" type="text" placeholder="title">
+        <br><br>
+        <input id="description" type="text" placeholder="description">
+        <br><br>
+        <button onclick="addToDO()">Add to do</button>
+        <div id="container"></div>
+    </div>
+
+    <script>
+        function addToDO() {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+
+            if (title && description) {
+                const newItem = document.createElement('div');
+                newItem.innerHTML = `
+                    <div>${title}</div>
+                    <div>${description}</div>
+                    <button onclick="markDone(this)">Mark as Done</button>
+                `;
+                document.getElementById("container").appendChild(newItem);
+            }
+
+            document.getElementById('title').value = '';
+            document.getElementById('description').value = '';
+        }
+
+        function markDone(button) {
+            button.innerText = 'Done✓';
+            
+        }
+    </script>
+</body>
+</html>
