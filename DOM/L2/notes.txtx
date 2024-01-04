@@ -1,0 +1,10 @@
+documents.querySelector() gives the first  appearance of the target variable
+
+documents.querySelectorAll() gives the collection  of the target variable
+
+if we want to access the 
+conventions for,
+                '#id'  for id
+                '.classname'  for the classname
+                'list'    for the list 
+
