@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +6,20 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+   
     <div>
+         <div>
+            <h1 style="color: #0d2e05; font-size: 24px; font-weight: bold;">Wlecome to the To-Do App</h1>
+        </div>
         <input id="title" type="text" placeholder="Add the Task">
         <br><br>
         <input id="description" type="text" placeholder="Description">
         <br><br>
         <button onclick="addToDO()">Add to do</button>
         <br></br>
+        <div>
+            <h1 style="color: #0d2e05; font-size: 24px; font-weight: bold;">Tasks</h1>
+        </div>
         <div id="container"></div>
     </div>
 
@@ -26,30 +32,20 @@
             if (newItem) {
                 document.getElementById("container").appendChild(newItem);
                 document.getElementById('title').value = '';
-                document.getElementById('description').value = '';
-            }
-        }
+                document.getElementById('description').value = ''; } 
+             } 
+                function createChild(title, description) { 
+                    if (title && description) { const newItem = document.createElement('div'); 
+                    newItem.innerHTML =
+                     ` <div>${title}</div> <div>${description}</div>
+                      <br></br> 
+                     <button onclick="markDone(this)">Mark as Done</button> 
+                     <br></br> `; return newItem; } return null; } 
 
-        function createChild(title, description) {
-            if (title && description) {
-                const newItem = document.createElement('div');
-                newItem.innerHTML = `
-                    <div>${title}</div>
-                    <div>${description}</div>
-                    <br></br>
-                    <button onclick="markDone(this)">Mark as Done</button>
-                    <br></br>
-                `;
-                return newItem;
-            }
-            return null;
-        }
 
-        function markDone(button) {
-            button.innerText = 'Done✓';
-            button.parentElement.style.textDecoration = "line-through";
-             
-            // Optional style change
+                     function markDone(button) { 
+                        button.innerText = 'Done✓'; 
+                        button.parentElement.style.textDecoration = "line-through"; // Optional style change
         }
    
         function updateDomAccordingState(state) {
@@ -62,14 +58,15 @@
         }
 
 
-        const dummyTasks = [
-            { title: "Go to gym", description: "Go from 5 to 7" },
-            { title: "Read a book", description: "Choose any genre" },
-            { title: "Complete coding challenge", description: "Use your favorite programming language" },
+        // const dummyTasks = [
+        //     { title: "Go to gym", description: "Go from 5 to 7" },
+        //     { title: "Read a book", description: "Choose any genre" },
+        //     { title: "Complete coding challenge", description: "Use your favorite programming language" },
             
-        ];
+        // ];
 
         updateDomAccordingState(dummyTasks);
     </script>
 </body>
 </html>
+            
