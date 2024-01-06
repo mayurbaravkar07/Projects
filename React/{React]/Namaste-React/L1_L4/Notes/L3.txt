@@ -1,0 +1,43 @@
+BUNDLERS---> vite,Parcel,webpack
+
+create-react-using   it created using the webpack
+
+ Q.Whar is diff b/w pkj.json and the pakage.lockjson
+-->package-lock.json will tell the exactly which version we are using 
+   never keep in the .gitignore
+   even if we don't have the node modules in the we can install it using the lockjson file
+   Always put node moudles in the .gitignore
+
+
+Parcel-Features-
+
+    .parcel_cache
+      ---> build will be cached and saved in this folder to later cache the files
+
+
+    HMR  -> it is a Hot Module Replacement  which Parcel does automatically for us 
+   using {File Watcher Algorithms} using the c++
+    
+   -BUNDLING,
+   -minify
+   -Cleaning of our code
+   -Dev and the production build
+   -Super Fast build Algorithms
+   -IMage Optimization
+   -Caching While Developement ->>>>uses the Consistent Hashing Algorithms
+   -Compression
+   -Compatible with older version of the browsers
+   -https on Dev
+   -it also manages the ports 
+   -.parcel-cache should be place inside the .gitignore 
+   -Everything is auto generated should be kept inside the .gitignore
+   -Zero Config 
+   -pollyfilling
+   -tree shaking(remove unsuable code) 
+   Transitive Dependencies --->Dependencies have their own Dependencies
+
+
+
+
+
+

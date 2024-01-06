@@ -1,0 +1,75 @@
+Assignments  :-
+    pollyfilling
+    treeShaking
+JSX
+
+    What is the jsx ??
+    --> -It is the html like syntax inside the javascrip but it is not the html inside in the javascript
+        -it is introduced bcz of the writing the it using the React.createElement() was very painful
+
+        
+
+        -React.createElement() ==> Object==>HTML(DOM)
+        -const heading =(<H1>Hello</H1>);
+
+        -In the browsers this code won't work bcz browsers don't undersand this code in the JSX babel does all this for us
+        -from it is like the blackbox which takes the html like code and convert it to the html which browser can understand
+        -Any pieace of the JSX you write  it will have the only one parent Element
+          and this will create the Ugly and the unnecessary div which is not required 
+          Solution ==> React.Fragment() it is the componet which is imported form the react 
+                <React.Fragment>
+                   //Now we can write here multiple parents 
+                <React.Fragment/>
+
+                Above  might look ugly so we can write :  
+                <>
+                   //Now we can write here multiple parents 
+                <> 
+
+
+    How JSX will Execute ???
+    --> JSX uses the 
+                    React.createElement()==>object==>HTML(DOM)       
+        
+        By using the babel libriary it comes with the parcel and not need to install 
+
+    Advatages jsx
+    -->
+        Readability
+
+
+Components in React-
+    Two Types of the Component in the react
+        1.Functional (New Way of the writing the code)  (mostly used )
+        2.Class Based Component -(Old)   (imp for older projects , interviews)
+
+
+     1.Functional Component-
+            -It is the normal js function which return JSX or the React Element 
+            -Component Name start with Camel case it is not case sensitive (but good proactice write in Camel)
+            -Multilines wrap in the paraenthesis
+            -Difference Between the React Component and Element is only that we component write in the function and the 
+                Element in the jsx syntax and they both have different ways of rendering
+            -Element inside the functional component is used  synatx {heading}
+            -Component Compostion-
+                Functional Component can be parsed inside the functional components and  used  synatx <Heading/> or{Heading()}
+                and is is known as the Component Compostion i.e  component inside component
+        
+            -In Functional Component We can write any javascript code inside the {} and it will work
+            -            
+
+
+
+
+
+
+
+
+
+
+
+
+                       
+
+
+                      
