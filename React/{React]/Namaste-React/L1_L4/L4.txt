@@ -1,31 +1,23 @@
 Assignments  :-
     pollyfilling
     treeShaking
+    Read about the keys react tracks about the keys (React Reconcilation Keys,Diff Algorithm)
+    
+
+
 JSX
 
     What is the jsx ??
-    --> -It is the html like syntax inside the javascrip but it is not the html inside in the javascript
-        -it is introduced bcz of the writing the it using the React.createElement() was very painful
+    --> It is the html like syntax inside the javascrip but it is not the html inside in the javascript
+        it is introduced bcz of the writing the it using the React.createElement() was very painful
 
-        
 
-        -React.createElement() ==> Object==>HTML(DOM)
-        -const heading =(<H1>Hello</H1>);
 
-        -In the browsers this code won't work bcz browsers don't undersand this code in the JSX babel does all this for us
-        -from it is like the blackbox which takes the html like code and convert it to the html which browser can understand
-        -Any pieace of the JSX you write  it will have the only one parent Element
-          and this will create the Ugly and the unnecessary div which is not required 
-          Solution ==> React.Fragment() it is the componet which is imported form the react 
-                <React.Fragment>
-                   //Now we can write here multiple parents 
-                <React.Fragment/>
+        React.createElement() ==> Object==>HTML(DOM)
+        const heading =(<H1>Hello</H1>);
 
-                Above  might look ugly so we can write :  
-                <>
-                   //Now we can write here multiple parents 
-                <> 
-
+        In the browsers this code won't work bcz browsers don't undersand this code in the JSX babel does all this for us
+        from it is like the blackbox which takes the html like code and convert it to the html which browser can understand
 
     How JSX will Execute ???
     --> JSX uses the 
